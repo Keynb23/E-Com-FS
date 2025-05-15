@@ -31,6 +31,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login onLogin={() => console.log('User logged in')} />} />
         </Routes>
+        <div><p>e-commerce</p></div>
       </div>
     </Provider>
   </QueryClientProvider>

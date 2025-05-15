@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import type { RootState } from '../../store';
 import { removeFromCart, clearCart } from "../../features/cartSlices";
 import './cart.css';
+import React from 'react';
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();

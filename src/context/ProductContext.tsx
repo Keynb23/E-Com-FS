@@ -2,6 +2,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import type { Product, Category } from "../types/types.ts";
 
+
 const apiClient = axios.create({
   baseURL: "https://fakestoreapi.com",
 });

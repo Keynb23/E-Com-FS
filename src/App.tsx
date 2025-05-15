@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { store } from './store';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import React from 'react';
 
 
 import { Landing } from './pages/Landing/Landing';

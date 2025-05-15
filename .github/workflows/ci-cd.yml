@@ -1,4 +1,4 @@
-name: Ecommerce App CI/CD TEMPLATE
+name: Ecommerce App CI/CD
 on:
   push:
     branches:
@@ -13,13 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+      - name: Run TypeScript linting
+        run: npm run lint
       - name: Run tests
         run: npm test
       - name: Build React app
@@ -29,7 +31,7 @@ jobs:
     needs: build
     steps:
       - name: Checkout code
-        uses: actions/checkout@v 更新
+        uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -39,4 +41,4 @@ jobs:
       - name: Deploy to Vercel
         run: |
           npm install -g vercel
-          vercel --prod --yes --token ${{secrets.VERCEL_TOKEN1}}
+          vercel --prod --yes --token ${{secrets.VERCEL_TOKEN_1}}

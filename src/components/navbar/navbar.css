@@ -1,0 +1,76 @@
+/* Main Navbar Styling */
+.NavBar-Container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-body-tertiary {
+    display: flex; 
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(54, 92, 150, 0.781);
+}
+
+/* Navbar Brand (Far Left) */
+#responsive-navbar-nav {
+
+    padding: 0 15px;
+    display: flex;
+    align-items: center; 
+    margin-right: auto; 
+}
+
+/* Centered Section (me-auto) */
+.me-auto {
+    display: flex;
+    flex-direction: row;
+    flex: 1; 
+}
+
+/* Right-Aligned Section (NavDrop and NavCart) */
+
+.NavDrop, .NavCart {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+}
+
+.NavCart {
+margin-left: auto;
+}
+
+.NavDrop {
+    margin-right: 20px;
+}
+
+
+/* Styling for individual nav links */
+.nav-link {
+    display: flex;
+    align-items: center;
+    margin-right: 50px; 
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .NavBar-Container {
+        flex-direction: column;  
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        margin: 5px 0; 
+    }
+
+        .NavCart, .NavDrop {
+        margin: 10px 0; 
+    }
+}
+
